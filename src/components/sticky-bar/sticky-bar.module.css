@@ -1,0 +1,53 @@
+.utilRow {
+  padding: 0.5rem 0.35rem;
+  position: sticky;
+  top: 0;
+  background: #242729;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  /* border-radius: 4px; */
+  z-index: 5;
+  box-sizing: border-box;
+
+  @media screen and (min-width: 760px) {
+    gap: 2rem;
+  }
+}
+
+.scores {
+  display: flex;
+  gap: 1rem;
+}
+
+.counter {
+  display: flex;
+  gap: 1rem;
+  /* margin-left: auto; */
+  font-size: 1rem;
+
+  @media screen and (min-width: 760px) {
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+}
+
+.currentScore {
+  font-weight: 600;
+}
+
+.total {
+  /* font-size: 1rem; */
+  /* opacity: 0.75; */
+  font-weight: 300;
+}
+
+.percentage {
+  display: none;
+
+  @media screen and (min-width: 760px) {
+    display: inline-block;
+  }
+}

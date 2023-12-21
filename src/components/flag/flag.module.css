@@ -1,0 +1,83 @@
+.card {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background: #171819;
+  border-radius: 4px;
+  padding: 0.5rem;
+  flex: 0 1 calc(50% - 1rem * 1 / 2);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 760px) {
+    flex: 0 1 calc(33% - 2rem * 2 / 3);
+  }
+
+  @media screen and (min-width: 760px) {
+    padding: 2rem;
+  }
+
+  @media screen and (min-width: 1040px) {
+    flex: 0 1 calc(20% - 2rem * 4 / 5);
+  }
+}
+
+.card:has(input:focus) {
+  outline: 3px solid var(--outline-color);
+  box-shadow: 0 0px 12px 4px rgba(255, 255, 255, 0.4);
+}
+
+.cardCorrect {
+  /* border: 1px solid green; */
+  border-color: green;
+}
+
+.image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 175px;
+  margin: 0 auto 0.5rem;
+  user-select: none;
+  pointer-events: none;
+  /* box-shadow: 0 0px 4px 1px rgba(255, 255, 255, 0.4); */
+  flex: 1;
+
+  @media screen and (min-width: 760px) {
+    margin-bottom: 1rem;
+  }
+}
+
+.input {
+  padding: 0.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  line-height: 1.5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #3b3b3b;
+
+  @media screen and (min-width: 760px) {
+    gap: 0.5rem;
+  }
+}
+
+.input:focus,
+.input:focus-within {
+  outline: 0px;
+}
+
+.inputIncorrect {
+  border-color: #b22222;
+}
+
+.answer {
+  margin: 0.5rem 0;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+
+  @media screen and (min-width: 760px) {
+    margin-top: 1rem;
+  }
+}
