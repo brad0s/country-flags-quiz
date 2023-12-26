@@ -152,12 +152,16 @@
   { "code": "RO", "name": "Romania", "altAnswers": [] },
   { "code": "RU", "name": "Russia", "altAnswers": [] },
   { "code": "RW", "name": "Rwanda", "altAnswers": [] },
-  { "code": "KN", "name": "Saint Kitts and Nevis", "altAnswers": [] },
-  { "code": "LC", "name": "Saint Lucia", "altAnswers": [] },
+  {
+    "code": "KN",
+    "name": "Saint Kitts and Nevis",
+    "altAnswers": ["st kitts and nevis", "st. kitts and nevis"]
+  },
+  { "code": "LC", "name": "Saint Lucia", "altAnswers": ["st lucia", "st. lucia"] },
   {
     "code": "VC",
     "name": "Saint Vincent and the Grenadines",
-    "altAnswers": ["Saint Vincent", "the Grenadines"]
+    "altAnswers": ["Saint Vincent", "st vincent", "st. vincent", "the Grenadines"]
   },
   { "code": "WS", "name": "Samoa", "altAnswers": [] },
   { "code": "SM", "name": "San Marino", "altAnswers": [] },

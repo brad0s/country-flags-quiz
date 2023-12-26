@@ -3,7 +3,6 @@ import styles from './flag.module.css';
 import { useState, useEffect, useContext } from 'react';
 import { GameStatus } from '../../utils/helpers';
 import { GameContext } from '../../context/GameContext';
-import.meta.glob('../../assets/flag-svgs/*.svg');
 
 function Flag({ code, name, altAnswers, handleAnswers }) {
   const { gameStatus } = useContext(GameContext);
@@ -12,10 +11,20 @@ function Flag({ code, name, altAnswers, handleAnswers }) {
   const acceptedAnswers = [name, ...altAnswers].filter(Boolean).join(', ');
   const cardCorrectClassName = isCorrect ? styles.cardCorrect : '';
   const inputIncorrectClassName = !isCorrect && value !== '' ? styles.inputIncorrect : '';
+  const imgUrl = new URL(`../../assets/flag-svgs/${code.toLowerCase()}.svg`, import.meta.url).href;
+
+  // useEffect(() => {
+  //   const dynamicSvgImport = async () => {
+  //     const svg = await import(`../../assets/flag-svgs/${code.toLowerCase()}.svg?react`);
+  //     console.log(svg.default);
+  //     // setFlagSvg(svg);
+  //   };
+  //   dynamicSvgImport();
+  // });
 
   const handleInput = (e) => {
     setValue(e.target.value);
-    const inputValue = e.target.value;
+    const inputValue = e.target.value.trim();
     const acceptedValues = acceptedAnswers.toLowerCase().split(', ');
     const match = acceptedValues.includes(inputValue.toLowerCase());
     if (match) {
@@ -43,11 +52,7 @@ function Flag({ code, name, altAnswers, handleAnswers }) {
   return (
     <>
       <div className={`${styles.card} ${cardCorrectClassName}`}>
-        <img
-          src={`/src/assets/flag-svgs/${code}.svg`}
-          className={styles.image}
-          alt='Country flag'
-        />
+        <img src={imgUrl} className={styles.image} alt='Country flag' />
         <input
           className={`${styles.input} ${inputIncorrectClassName}`}
           type='text'
