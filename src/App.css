@@ -3,7 +3,6 @@
   margin: 0 auto;
   padding: 1rem;
   text-align: center;
-  /* -webkit-focus-ring-color: #ff8c00; */
   --outline-color: #c24afd;
   --text-color: #d8d4cf;
   color: var(--text-color);

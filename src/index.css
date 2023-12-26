@@ -6,12 +6,18 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   /* background-color: #303030; */
-  background: #131516;
+  /* background: #131516; */
+  --black: #131516;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  background: var(--black);
 }
 
 a {
