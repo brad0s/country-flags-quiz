@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  display: grid;
+  top: 0;
+  left: 0;
+  z-index: 9100;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  overflow-y: auto;
+  place-items: center;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modalContent {
+  padding: 2rem;
+  background: #242729;
+  border: 2px solid #fff;
+  max-width: 560px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+}
+
+.highScoresList {
+  display: flex;
+  flex-flow: column;
+  gap: 0.5rem;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.highScoreItem {
+  display: grid;
+  grid-template-columns: 20px 140px auto auto;
+  gap: 0.5rem;
+  text-align: left;
+}

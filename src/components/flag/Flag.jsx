@@ -23,6 +23,7 @@ function Flag({ code, name, altAnswers, handleAnswers }) {
   // });
 
   const handleInput = (e) => {
+    // console.log('flag input');
     setValue(e.target.value);
     const inputValue = e.target.value.trim();
     const acceptedValues = acceptedAnswers.toLowerCase().split(', ');
@@ -52,7 +53,11 @@ function Flag({ code, name, altAnswers, handleAnswers }) {
   return (
     <>
       <div className={`${styles.card} ${cardCorrectClassName}`}>
-        <img src={imgUrl} className={styles.image} alt='Country flag' />
+        <img
+          src={imgUrl}
+          className={styles.image}
+          alt='Country flag'
+        />
         <input
           className={`${styles.input} ${inputIncorrectClassName}`}
           type='text'
