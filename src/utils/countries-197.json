@@ -40,19 +40,22 @@
   {
     "code": "CG",
     "name": "Congo",
-    "altAnswers": [
-      "the republic of the congo",
-      "the congo republic",
-      "Congo-Brazzaville",
-      "the congo"
-    ]
+    "altAnswers": ["the republic of the congo", "the congo republic", "Congo-Brazzaville"]
   },
   { "code": "CR", "name": "Costa Rica", "altAnswers": [] },
   { "code": "HR", "name": "Croatia", "altAnswers": [] },
   { "code": "CU", "name": "Cuba", "altAnswers": [] },
   { "code": "CY", "name": "Cyprus", "altAnswers": [] },
-  { "code": "CZ", "name": "Czechia", "altAnswers": ["the Czech Republic", "Czech Republic"] },
-  { "code": "CD", "name": "Democratic Republic of the Congo", "altAnswers": ["DRC"] },
+  {
+    "code": "CZ",
+    "name": "Czechia",
+    "altAnswers": ["the Czech Republic", "Czech Republic", "Bohemia"]
+  },
+  {
+    "code": "CD",
+    "name": "Democratic Republic of the Congo",
+    "altAnswers": ["DRC", "DR Congo", "Congo-Kinshasa", "the congo"]
+  },
   { "code": "DK", "name": "Denmark", "altAnswers": [] },
   { "code": "DJ", "name": "Djibouti", "altAnswers": [] },
   { "code": "DM", "name": "Dominica", "altAnswers": [] },

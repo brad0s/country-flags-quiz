@@ -7,6 +7,7 @@ export const GameContext = createContext(null);
 
 export const GameContextProvider = ({ children }) => {
   const [counter, setCounter] = useState(0);
+  const [time, setTime] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [countries, setCountries] = useState([]);
   const total = countries.length;
@@ -20,6 +21,7 @@ export const GameContextProvider = ({ children }) => {
   const handleButtonClick = () => {
     if (gameStatus === GameStatus.INIT) {
       setGameStatus(GameStatus.PLAYING);
+      setCountries(shuffle(countriesData));
     } else if (gameStatus === GameStatus.PLAYING) {
       setGameStatus(GameStatus.ENDED);
     } else {
@@ -33,6 +35,8 @@ export const GameContextProvider = ({ children }) => {
     counter,
     answers,
     setAnswers,
+    time,
+    setTime,
     countries,
     total,
     gameStatus,

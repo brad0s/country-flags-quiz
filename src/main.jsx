@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// import 'dotenv/config';
+import './utils/firebase'; // Ensure Firebase is initialized
 import { GameContextProvider } from './context/GameContext';
 import App from './App.jsx';
 import './index.css';
